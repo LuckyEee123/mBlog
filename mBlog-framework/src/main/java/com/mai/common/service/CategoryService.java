@@ -2,6 +2,7 @@ package com.mai.common.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.mai.common.domain.Category;
+import com.mai.common.domain.Result;
 
 
 /**
@@ -12,5 +13,6 @@ import com.mai.common.domain.Category;
  */
 public interface CategoryService extends IService<Category> {
 
+    Result getCategoryList();
 }
 
