@@ -1,6 +1,7 @@
 package com.mai.blog.controller;
 
 import com.mai.common.domain.Article;
+import com.mai.common.domain.Result;
 import com.mai.common.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,9 +17,9 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
-    @GetMapping("/list")
-    public List<Article> testList() {
-       return articleService.list();
+    @GetMapping("/hotArticleList")
+    public Result getHotArticleList() {
+        return articleService.hotArticleList();
     }
 
 }
